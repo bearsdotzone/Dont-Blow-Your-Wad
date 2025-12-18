@@ -13,15 +13,15 @@ Arguments:
   - help: Automatically checks Twinkly and the current rotating wad values
 
   - default: "false"
- 
+
 - all:
-  
+
   - help: Automatically checks all wad values
 
   - default: "false"
- 
+
 - wad:
-  
+
   - help: define the wad type you want to check ("cold", "hot", etc)
 
   - default: "false"
