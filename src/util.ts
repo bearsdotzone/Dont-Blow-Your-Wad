@@ -140,6 +140,7 @@ export function results(wadTypes: WadType[]) {
       if (mallNet <= 0 && pgNet <= 0) return null;
 
       return {
+        price,
         item,
         mallNet,
         mallROI: mallNet / price,
@@ -150,10 +151,16 @@ export function results(wadTypes: WadType[]) {
     .filter((o): o is NonNullable<typeof o> => o !== null)
     .sort((a, b) => b.pgNet - a.pgNet); // sort by Pricegun by default
 
-  for (const { item, mallNet, mallROI, pgNet, pgROI } of wadResults) {
-    print(`For Item: ${item}:`);
+  for (const { price, item, mallNet, mallROI, pgNet, pgROI } of wadResults) {
+    print(`For Item: ${item}: price: ${price}`);
     print(`  mall:     net ${mallNet.toFixed(0)} meat (ROI ${(mallROI * 100).toFixed(1)}%)`);
     print(`  pricegun: net ${pgNet.toFixed(0)} meat (ROI ${(pgROI * 100).toFixed(1)}%)`);
     print(``);
   }
+
+  let out = "";
+  for (const { price, item } of wadResults) {
+    out += `mallbuy 1000 ${item}@${price};`;
+  }
+  print(out);
 }
