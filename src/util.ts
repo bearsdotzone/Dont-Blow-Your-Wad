@@ -163,4 +163,10 @@ export function results(wadTypes: WadType[]) {
     out += `mallbuy 1000 ${item}@${price};`;
   }
   print(out);
+
+  out = "";
+  for (const { item } of wadResults) {
+    out += `pulverize * ${item};`;
+  }
+  print(out);
 }
