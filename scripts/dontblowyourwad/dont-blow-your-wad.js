@@ -7026,7 +7026,7 @@ function results(wadTypes) {
   try {
     for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
       var _item2 = _step4.value.item;
-      out += "pulverize ".concat(_item2, ";");
+      out += "pulverize * ".concat(_item2, ";");
     }
   } catch (err) {
     _iterator4.e(err);
