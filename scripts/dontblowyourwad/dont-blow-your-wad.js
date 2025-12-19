@@ -7020,6 +7020,20 @@ function results(wadTypes) {
     _iterator3.f();
   }
   (0,external_kolmafia_namespaceObject.print)(out);
+  out = "";
+  var _iterator4 = util_createForOfIteratorHelper(wadResults),
+    _step4;
+  try {
+    for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+      var _item2 = _step4.value.item;
+      out += "pulverize ".concat(_item2, ";");
+    }
+  } catch (err) {
+    _iterator4.e(err);
+  } finally {
+    _iterator4.f();
+  }
+  (0,external_kolmafia_namespaceObject.print)(out);
 }
 ;// ./src/main.ts
 function main_toConsumableArray(arr) { return main_arrayWithoutHoles(arr) || main_iterableToArray(arr) || main_unsupportedIterableToArray(arr) || main_nonIterableSpread(); }
